@@ -40,7 +40,9 @@ function addContact() {
   var newName=document.getElementById('name').value;
   var newNumber=document.getElementById('number').value;
   var newAddress=document.getElementById('address').value;
-  contactList.push(new Contact(newName,newNumber,newAddress));
+  if(newName){
+      contactList.push(new Contact(newName,newNumber,newAddress));
+  }
   clear();
   display();
 }
